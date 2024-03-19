@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(circle at center, #45475a, #1e1e2e);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 40px);
+  margin: 20px 0;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  max-width: 800px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-image: url('psicomini.gif');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=submit] {
+  background-color: #1e1e2e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .container {
+    width: 90%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+  <body>
+    <h1>Cadastro de Pessoa Jurídica</h1>
+    <form action="http://localhost:3000/simple_server" method="post">
+      <table>
+        <tr>
+          <td><label for="cnpj">CNPJ:</label></td>
+          <td>
+            <input
+              type="text"
+              id="cnpj"
+              name="cnpj"
+              pattern="\d{14}"
+              maxlength="14"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td>
+            <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="razao_social">Razão Social:</label></td>
+          <td>
+            <input
+              type="text"
+              id="razao_social"
+              name="razao_social"
+              maxlength="60"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="tipo_empresa">Tipo de Empresa:</label></td>
+          <td>
+            <select id="tipo_empresa" name="tipo_empresa">
+              <option value="privada">Privada</option>
+              <option value="publica">Pública</option>
+              <option value="ong">ONG</option>
+              <option value="adm_direta">Adm Direta</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="insercao_fiscal">Inserção Fiscal:</label></td>
+          <td>
+            <input
+              type="radio"
+              id="isenta"
+              name="insercao_fiscal"
+              value="isenta"
+            />
+            <label for="isenta">Isenta</label>
+            <input
+              type="radio"
+              id="nao_isenta"
+              name="insercao_fiscal"
+              value="nao_isenta"
+            />
+            <label for="nao_isenta">Não Isenta</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="modalidades_contratacao"
+              >Modalidades de Contratação:</label
+            >
+          </td>
+          <td>
+            <input
+              type="checkbox"
+              id="clt"
+              name="modalidades_contratacao"
+              value="clt"
+            />
+            <label for="clt">CLT</label>
+            <input
+              type="checkbox"
+              id="rju"
+              name="modalidades_contratacao"
+              value="rju"
+            />
+            <label for="rju">RJU</label>
+            <input
+              type="checkbox"
+              id="autonomo"
+              name="modalidades_contratacao"
+              value="autonomo"
+            />
+            <label for="autonomo">Autônomo</label>
+            <input
+              type="checkbox"
+              id="pj_terceirizada"
+              name="modalidades_contratacao"
+              value="pj_terceirizada"
+            />
+            <label for="pj_terceirizada">PJ Terceirizada</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="faturamento_anual">Faturamento Anual:</label></td>
+          <td>
+            <input
+              type="text"
+              id="faturamento_anual"
+              name="faturamento_anual"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="descricao_atividades">Descrição das Atividades:</label>
+          </td>
+          <td>
+            <textarea
+              id="descricao_atividades"
+              name="descricao_atividades"
+              rows="5"
+              cols="15"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="site_empresa">Site da Empresa:</label></td>
+          <td><input type="url" id="site_empresa" name="site_empresa" /></td>
+        </tr>
+        <tr>
+          <td><label for="contrato_social">Contrato Social:</label></td>
+          <td>
+            <input type="file" id="contrato_social" name="contrato_social" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="telefone_empresa">Telefone da Empresa:</label></td>
+          <td>
+            <input type="tel" id="telefone_empresa" name="telefone_empresa" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Limpar" />
+    </form>
+  </div>
+  </body>
+</html>

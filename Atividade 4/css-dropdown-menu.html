@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.menu01 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;  
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+div.menu02 {	
+    background-color: yellow;
+    color: black;
+}
+a {
+	text-decoration:none;
+} 
+</style>
+</head>
+<body>
+
+<h2>Exemplo de menu dropdown</h2>
+<p>Passando o mouse pelo menu principal, o submenu desce!</p>
+
+<div class="dropdown">
+  <span class="menu01">Menu principal</span>
+  <div class="dropdown-content menu02">
+  <p><a href="https://www.google.com.br">Google</a></p>
+  <p><a href="https://www.uol.com.br">UOL</a></p>
+  <p><a href="https://nasa.com/">NASA</a></p>
+  </div>
+</div>
+</body>
+</html>
