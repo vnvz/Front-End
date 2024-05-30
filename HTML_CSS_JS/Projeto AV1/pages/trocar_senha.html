@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troca de Senha de Clientes</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="header sidenav">
+  <div class="sidenav">
+    <img src="../img/logo_empresa.png" alt="InfoTech Soluções em TI" class="img-fluid">
+    <h1>InfoTech</h1>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="solicitacao_servicos.html">Serviços</a>
+    <a href="mailto:contato@empresa.com">contato@infotech.com</a>
+
+  <footer class="container">
+    <div class="info">
+      <p>Telefone: (81) 3422-1234</p>
+      <p>WhatsApp: (81) 92415-52345</p>
+      <p>Avenida Cais do Apolo, 77 Recife/PE</p>
+      <p>CEP: 50030-903</p>
+    </div>
+    
+    <div class="payment-methods">
+      <img src="../img/formas_pagamento/forma_pagamento1.png" alt="Forma de Pagamento 1" class="img-fluid">
+      <img src="../img/formas_pagamento/forma_pagamento2.png" alt="Forma de Pagamento 2" class="img-fluid">
+    </div>
+  </footer>
+</div>
+</header>
+  </div>
+  </nav>
+</header>
+
+<section class="container my-5 content">
+  <h2>Troca de Senha de Clientes</h2>
+  <form id="changePasswordForm">
+    <div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="newPassword">Nova Senha:</label>
+      <input type="password" id="newPassword" name="newPassword" required>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirme a Nova Senha:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+    <div>
+      <p>Instruções: A senha deve ter pelo menos 6 caracteres, contendo pelo menos um caractere numérico, uma letra maiúscula e um dos seguintes caracteres especiais: @ # $ % & * ! ? / \ | - _ + . =</p>
+    </div>
+    <div>
+      <button type="submit">Trocar Senha</button>
+      <button type="button" onclick="clearForm()">Limpar</button>
+    </div>
+  </form>
+</section>
+
+<script src="../scripts/change_password.js"></script>
+</body>
+</html>

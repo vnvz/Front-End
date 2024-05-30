@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="tabelaPadrao.css">
+    <title>Figuras geométricas</title>
+</head>
+<script src"areasPerimetros.js"></script>
+<body>
+    <h1>Cálculo de área e de perímetro</h1>
+    <table>
+        <tr>
+            <td>Tipo de figura:</td>
+            <td>
+                <select id="tipoFigura" onchange="tratarEventoSelecao()">
+                    <option value="0">Linha</option>
+                    <option value="1">Círculo</option>
+                    <option value="2">Retângulo</option>
+                    <option value="3">Triangulo</option>
+                    <option value="4">Quadrado</option>
+                    <option value="5">Elipse</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <div id="dv0" style="display:block">
+        <table>
+            <tr>
+                <td>Comprimento:</td>
+                <td><input type="text" value="" id="lbComprimento"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="dv1" style="display:none">
+        <table>
+            <tr>
+                <td>Raio:</td>
+                <td><input type="text" value="" id="lbRaio"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="dv2" style="display:none">
+        <table>
+            <tr>
+                <td>Base:</td>
+                <td><input type="text" value="" id="lbBase"></td>
+            </tr>
+            <tr>
+                <td>Altura:</td>
+                <td><input type="text" value="" id="lbAltura"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="dv3" style="display:none">
+        <table>
+            <tr>
+                <td>Lado 1:</td>
+                <td><input type="text" value="" id="lbLado1"></td>
+            </tr>
+            <tr>
+                <td>Lado 2:</td>
+                <td><input type="text" value="" id="lbLado2"></td>
+            </tr>
+            <tr>
+                <td>Lado 3:</td>
+                <td><input type="text" value="" id="lbLado3"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="dv4" style="display:none">
+        <table>
+            <tr>
+                <td>Lado:</td>
+                <td><input type="text" value="" id="lbLado"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="dv5" style="display:none">
+        <table>
+            <tr>
+                <td>Raio Maior:</td>
+                <td><input type="text" value="" id="lbRaioMaior"></td>
+            </tr>
+            <tr>
+                <td>Raio Menor:</td>
+                <td><input type="text" value="" id="lbRaioMenor"></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id="res" style="display:block">
+        <table>
+            <tr>
+                <td>Perímetro:</td>
+                <td><input type="text" disabled id="perimetro"></td>
+            </tr>
+            <tr>
+                <td>Área:</td>
+                <td><input type="text" disabled id="area"></td>
+            </tr>
+        </table>
+    </div>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <input type="button" value="Limpar" onclick="limpar()">
+</body>
+</html>

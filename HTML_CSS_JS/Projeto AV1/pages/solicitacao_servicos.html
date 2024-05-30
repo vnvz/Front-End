@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitação de Serviços de TI</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header sidenav">
+  <div class="sidenav">
+    <img src="../img/logo_empresa.png" alt="InfoTech Soluções em TI" class="img-fluid">
+    <h1>InfoTech</h1>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="solicitacao_servicos.html">Serviços</a>
+    <a href="mailto:contato@empresa.com">contato@infotech.com</a>
+
+  <!-- Footer -->
+  <footer class="container">
+    <div class="info">
+      <p>Telefone: (81) 3422-1234</p>
+      <p>WhatsApp: (81) 92415-52345</p>
+      <p>Avenida Cais do Apolo, 77 Recife/PE</p>
+      <p>CEP: 50030-903</p>
+    </div>
+    
+    <div class="payment-methods">
+      <img src="../img/formas_pagamento/forma_pagamento1.png" alt="Forma de Pagamento 1" class="img-fluid">
+      <img src="../img/formas_pagamento/forma_pagamento2.png" alt="Forma de Pagamento 2" class="img-fluid">
+    </div>
+  </footer>
+</div>
+</header>
+  </div>
+  </nav>
+</header>
+
+<div class="flex-container">
+<section class="container my-5 content">
+  <h2>Informações do Usuário</h2>
+  <script>
+    window.onload = function() {
+      const userEmail = localStorage.getItem('userEmail');
+      document.getElementById('userName').textContent = userEmail;
+      document.getElementById('userEmail').textContent = userEmail;
+    }
+  </script>
+  <div>
+    <label for="userName">Nome:</label>
+    <label id="userName">Nome do Usuário</label>
+  </div>
+  <div>
+    <label for="userEmail">E-mail/Login:</label>
+    <label id="userEmail">email@exemplo.com</label>
+  </div>
+</section>
+
+<section class="container my-5 content">
+  <h2>Solicitações Anteriores</h2>
+  <table id="previousRequests">
+    <thead>
+      <tr>
+        <th>Data do Pedido</th>
+        <th>Número da Solicitação</th>
+        <th>Serviço de TI</th>
+        <th>Status</th>
+        <th>Preço</th>
+        <th>Data Prevista de Atendimento</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01/05/2024</td>
+        <td>001</td>
+        <td>Manutenção de Computador</td>
+        <td>Em Elaboração</td>
+        <td>R$ 100,00</td>
+        <td>05/05/2024</td>
+        <td><button onclick="deleteRequest(1)">Excluir</button></td>
+      </tr>
+      <tr>
+        <td>02/05/2024</td>
+        <td>002</td>
+        <td>Instalação de Rede</td>
+        <td>Em Elaboração</td>
+        <td>R$ 150,00</td>
+        <td>07/05/2024</td>
+        <td><button onclick="deleteRequest(2)">Excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="container my-5 content">
+  <h2>Nova Solicitação</h2>
+  <form id="newRequestForm">
+    <div>
+      <label for="service">Serviço de TI:</label>
+      <select id="service" name="service" onchange="updatePriceAndDeadline()">
+        <option value="manutencao">Manutenção de Computador</option>
+        <option value="instalacao">Instalação de Rede</option>
+        <option value="dev_software">Dev software personalizado</option>
+        <option value="consultoria_seguranca">Consultoria em segurança</option>
+        <option value="infra_rede">Implementação de infra de rede</option>
+        <option value="suporte_tecnico">Suporte técnico</option>
+        <option value="migracao_nuvem">Migração para nuvem</option>
+        <option value="dev_apps">Dev Aplicativos móveis</option>
+        <option value="analise_dados">Análise de dados</option>
+      </select>
+    </div>
+    <div>
+      <label for="price">Preço:</label>
+      <label id="price">R$ 100,00</label>
+    </div>
+    <div>
+      <label for="deadline">Prazo de Atendimento:</label>
+      <label id="deadline">05/05/2024</label>
+    </div>
+    <div>
+      <label for="expectedDate">Data Prevista de Atendimento:</label>
+      <label id="expectedDate">05/05/2024</label>
+    </div>
+    <div>
+      <label for="status">Status:</label>
+      <label id="status">Em Elaboração</label>
+    </div>
+    <div>
+      <button type="button" onclick="addRequest()">Incluir Solicitação</button>
+    </div>
+  </form>
+</section>
+</div>
+
+<script src="../scripts/request.js"></script>
+</body>
+</html>

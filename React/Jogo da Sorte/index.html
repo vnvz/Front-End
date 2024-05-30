@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Sorte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="figures">
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+      <div class="figure"></div>
+    </div>
+    <div class="button-container">
+      <button class="button" id="play">JOGAR</button>
+      <button class="button" id="reset">ZERAR TUDO</button>
+    </div>
+    <p id="timer">TIMER: 00:30</p>
+    <p id="result">RESULTADO: </p>
+    <table class="history">
+      <thead>
+        <tr>
+          <th>RESULTADO</th>
+        </tr>
+      </thead>
+      <tbody id="history-body">
+        <tr><td></td></tr> <!-- Initial row for result -->
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

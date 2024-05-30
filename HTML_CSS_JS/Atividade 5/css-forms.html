@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-image: url('psicomini.gif');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Ajuste das flutuações após as colunas */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Layout responsivo - quando a tela tem menos do que 600px de largura, as colunas que definem 
+ficam os labels e os inputs/selects ficam empilhadas, em vez de ficarem lado a lado. O botão
+também fica empilhado com os demais controles. */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Form responsivo</h2>
+<p>Redimensionar o navegador para ver o efeito</p>
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Primeiro nome</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Nome..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Último nome</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Sobrenome..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">País</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+	  <option value="argentina">Argentina</option>
+        <option value="brasil">Brasil</option>
+		<option value="paraguai">Paraguai</option>
+        <option value="peru">Peru</option>
+        <option value="uruguai">Uruguai</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="text">Texto</label>
+    </div>
+    <div class="col-75">
+      <textarea id="texto" name="texto" placeholder="Escreva um texto.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit" value="Enviar">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
+]

@@ -1,0 +1,3 @@
+- Melhorar os layouts das páginas (cv.html e forms.html) utilizando:
+    - Bootstrap (cv.html)
+    - Flex layout (forms.html)

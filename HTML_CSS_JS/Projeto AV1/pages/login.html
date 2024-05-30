@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login de Clientes</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header sidenav">
+  <div class="sidenav">
+    <img src="../img/logo_empresa.png" alt="InfoTech Soluções em TI" class="img-fluid">
+    <h1>InfoTech</h1>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="solicitacao_servicos.html">Serviços</a>
+    <a href="mailto:contato@empresa.com">contato@infotech.com</a>
+
+  <footer class="container">
+    <div class="info">
+      <h4>Informações de Contato</h4>
+      <p>Telefone: (81) 3422-1234</p>
+      <p>WhatsApp: (81) 92415-52345</p>
+      <p>Avenida Cais do Apolo, 77 Recife/PE</p>
+      <p>CEP: 50030-903</p>
+    </div>
+    
+    <div class="payment-methods">
+      <h4>Formas de pagamento</h4>
+      <img src="../img/formas_pagamento/forma_pagamento1.png" alt="Forma de Pagamento 1" class="img-fluid">
+      <img src="../img/formas_pagamento/forma_pagamento2.png" alt="Forma de Pagamento 2" class="img-fluid">
+    </div>
+  </footer>
+</div>
+</header>
+  </div>
+  </nav>
+</header>
+
+
+<!-- Login Form -->
+<section class="container my-5 content">
+  <h2>Login de Clientes</h2>
+  <form id="loginForm">
+    <div>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+      <button type="submit">Realizar Login</button>
+      <button type="button" onclick="clearForm()">Limpar</button>
+    </div>
+  </form>
+  <p><a href="trocar_senha.html">Esqueceu a senha?</a></p>
+  <p>Não possui cadastro? <a href="cadastro.html">Cadastre-se aqui</a></p>
+</section>
+
+<!-- Scripts -->
+<script src="../scripts/login.js"></script>
+</body>
+</html>

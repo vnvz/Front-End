@@ -1,0 +1,8 @@
+Fazer um formulário genérico com 8 campos
+- Labels
+- Text
+- Select
+- Radio 
+
+As limitações para estilizar são uso de Float e Clear
+- Não pode usar flex, grid ou bootstrap
